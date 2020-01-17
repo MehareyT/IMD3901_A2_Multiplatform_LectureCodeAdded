@@ -5,16 +5,10 @@
       <meta name="description" content="Hello, WebVR! - A-Frame">
       <!--  note we are using 0.9.1 as most recent -->
       <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-      <script src="js/create-cow-component.js"></script>
-      <script src="js/delete-cow-component.js"></script>
     </head>
     <body>
       <!-- A-Frame scene - al A-Frame entities must go in the scene -->
-      <a-scene>
-          <a-assets>
-              <a-asset-item id="helmet_model" response-type="arraybuffer" src="assets/models/DamagedHelmet.glb"></a-asset-item>
-          </a-assets>
-
+      <a-scene></a-scene>
           <a-entity camera look-controls wasd-controls position="0 1.2 2">
             <a-entity cursor="rayOrigin:mouse;"
                       raycaster="far:20; interval:100; object:.clickable;">
@@ -34,10 +28,6 @@
                   geometry="primitive:cylinder; radius:0.5; height:0.1;" 
                   material="color:rgb(255, 100, 100);"
                   create-cow-component=""></a-entity>
-
-          <a-entity id="helmet"
-                    position="0 1 -2"
-                    gltf-model= "#helmet_model" ></a-entity>
       </a-scene>
     </body>
 </html>
