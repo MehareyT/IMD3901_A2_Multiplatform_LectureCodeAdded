@@ -1,0 +1,22 @@
+{
+  "name": "lesson2aframe",
+  "version": "1.0.0",
+  "description": "1/15/2020 IMD3901B Lesson",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MehareyT/Lesson2AFrame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MehareyT/Lesson2AFrame/issues"
+  },
+  "homepage": "https://github.com/MehareyT/Lesson2AFrame#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
