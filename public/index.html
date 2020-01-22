@@ -9,7 +9,9 @@
     <body>
       <!-- A-Frame scene - al A-Frame entities must go in the scene -->
       <a-scene>
-          <a-entity camera look-controls wasd-controls position="0 1.2 2">
+        <a-sky color="#6EBAA7"></a-sky>  
+        
+        <a-entity camera look-controls wasd-controls position="0 2 6">
             <a-entity cursor="rayOrigin:mouse;"
                       raycaster="far:20; interval:100; object:.clickable;">
             </a-entity>
@@ -23,11 +25,35 @@
                   geometry="primitive:plane; width:5.0; height:5.0;" 
                   material="color:black;"></a-entity>
 
-          <a-entity id="table"
-                  position="0 0 "
-                  scale="1 1 1"
-                  geometry="primitive:box; width: 2.0; height:2.0;"
+          <a-entity id="panel"
+                  position="0 1 4"
+                  scale="2 0.5 0"
+                  rotation="-20 0 0"
+                  geometry="primitive:box; width: 2.0; height: 1.5;"
                   material="color:grey;"></a-entity>
+
+            <a-entity id="song_test"
+                  class="clickable"
+                  geometry="primitive:cylinder; radius:0.2; height:0.1;" 
+                  position="0 1 4"
+                  rotation="68 0 0"
+                  material="color:rgb(255, 100, 100);"></a-entity>
+            
+            <a-entity id="left_arrow"
+                  class="clickable"
+                  geometry="primitive:cone; radius-bottom:0.2; radius-top:0; height:0.5;"
+                  position="-0.5 1 4"
+                  rotation="0 0 90"
+                  material="color:green"></a-entity>
+
+              <a-entity id="rightg_arrow"
+                  class="clickable"
+                  geometry="primitive:cone; radius-bottom:0.2; radius-top:0; height:0.5;"
+                  position="-0.5 1 4"
+                  rotation="0 0 90"
+                  material="color:green"></a-entity>
+
+
 
           <a-entity id="button"
                   class="clickable"
