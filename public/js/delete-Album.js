@@ -1,4 +1,4 @@
-AFRAME.registerComponent( 'delete-album',{
+AFRAME.registerComponent( '-album',{
     init : function()
     {
         console.log('init component');
@@ -8,6 +8,17 @@ AFRAME.registerComponent( 'delete-album',{
 
         Context_AF.el.addEventListener('click', function(event) {
             console.log('click');
+            if(document.querySelector('#brown_bird')!= null){
+                
+
+                console.log('check');
+
+
+            }
+            
+
+
+
             Context_AF.deleteCow();
         });
 

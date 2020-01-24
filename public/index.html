@@ -8,6 +8,7 @@
       <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
       <script src="js/create-album.js"></script>
       <script src="js/delete-album.js"></script>
+      <script src="js/play-album.js"></script>
 
     </head>
     <body>
@@ -22,10 +23,6 @@
 
           </a-entity>
 
-          <a-assets>
-            <img id="brown_bird" src="assets/textures/brown_bird_album.jpg">
-            <img id="judas_priet" src="assets/textures/judas_priest_album.jpg">
-          </a-assets>
 
         <a-entity id="plane"
                   position="0 0 0"
@@ -46,7 +43,8 @@
                   geometry="primitive:cylinder; radius:0.2; height:0.1;" 
                   position="0 1 4"
                   rotation="68 0 0"
-                  material="color:rgb(255, 100, 100);"></a-entity>
+                  material="color:rgb(255, 100, 100);"
+                  play-Album=""></a-entity>
             
             <a-entity id="left_arrow"
                   class="clickable"
@@ -62,13 +60,6 @@
                   position="0.5 1 4"
                   rotation="0 0 -90"
                   material="color:green"></a-entity>
-
-
-
-          <a-entity id="button"
-                  class="clickable"
-                  geometry="primitive:cylinder; radius:0.5; height:0.1;" 
-                  material="color:rgb(255, 100, 100);"></a-entity>
       </a-scene>
     </body>
 </html>

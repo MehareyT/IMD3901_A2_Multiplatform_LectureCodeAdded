@@ -7,8 +7,13 @@ AFRAME.registerComponent( 'create-album',{
 
         Context_AF.el.addEventListener('click', function(event) {
             console.log('click');
+
+            const AlbumObject = document.querySelector('#brown_bird');
+
             if(document.querySelector('#brown_bird')!= null){
                 
+                AlbumObject.setAttribute('material','src:assets/textures/judas_priest_album.jpg');
+        
 
                 console.log('check');
 
@@ -39,20 +44,7 @@ AFRAME.registerComponent( 'create-album',{
         Album1Elem.setAttribute('delete-Album', '');
         Album1Elem.setAttribute('position', {x:0.2, y:4, z:0});
 
-        let Album2Elem = document.createElement('a-entity');
-        Album2Elem.setAttribute('id', "judas_priest");
-        Album2Elem.setAttribute('class','clickable');
-        Album2Elem.setAttribute('geometry', 'primitive:box; width: 2.0; depth: 0.5; height: 2.0');
-        Album2Elem.setAttribute('material', 'src:assets/textures/judas_priest_album.jpg');
-        Album2Elem.setAttribute('delete-Album', '');
-        Album2Elem.setAttribute('position', {x:0.2, y:4, z:0});
-
-
-
-       
-
         let scene = document.querySelector('a-scene');
         scene.appendChild(Album1Elem);
-        scene.appendChild(Album2Elem);
     }
 });
