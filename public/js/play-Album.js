@@ -8,6 +8,8 @@ AFRAME.registerComponent( 'play-album',{
         Context_AF.el.addEventListener('click', function(event) {
             console.log('click');
             
+            sound="src:#buttonPressSound; autoplay: false; on: click;"
+
             Context_AF.playAlbum();
     });
 
