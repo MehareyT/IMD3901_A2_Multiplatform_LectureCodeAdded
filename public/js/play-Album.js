@@ -1,15 +1,47 @@
 AFRAME.registerComponent( 'play-album',{
+    
     init : function()
+    
     {
+       
         console.log('init component');
+        
 
         const Context_AF = this;
+        const audio1 = new Audio('assets/sounds/brownBirdAudio.mp3');
+        const audio2 = new Audio('assets/sounds/judasPriestAudio.mp3')
+        const audio3 = new Audio('assets/sounds/mtJoyAudio.mp3')
 
         Context_AF.el.addEventListener('click', function(event) {
-            console.log('click');
-            
-            sound="src:#buttonPressSound; autoplay: false; on: click;"
+            const albumsong = document.querySelector(".music");
+            console.log('play');
 
+            if(albumsong.getAttribute('id')=== 'brown_bird'){
+                console.log('bird');
+
+                audio2.pause();
+                audio3.pause();
+                audio1.play();
+
+            }
+
+            else if(albumsong.getAttribute('id')=== 'judas_priest'){
+                console.log('judas');
+                
+                audio1.pause();
+                audio3.pause();
+                audio2.play();
+            }
+
+            else if(albumsong.getAttribute('id')=== 'mt_joy'){
+                console.log('mtjoy');
+ 
+                audio1.pause();
+                audio2.pause();
+                audio3.play();
+            }
+            
+            
             Context_AF.playAlbum();
     });
 
@@ -25,9 +57,11 @@ AFRAME.registerComponent( 'play-album',{
     playAlbum: function(){
     const Context_AF = this;
 
+        
+
 
     let scene = document.querySelector('a-scene');
-    scene.appendChild(playAlbum);
+    scene.appendChild(play-album);
 }
     
 });

@@ -54,15 +54,15 @@ AFRAME.registerComponent( 'create-album',{
     createAlbum: function() {
         const Context_AF = this;
 
-        let Album1Elem = document.createElement('a-entity');
-        Album1Elem.setAttribute('id', "brown_bird");
-        Album1Elem.setAttribute('class','clickable music');
-        Album1Elem.setAttribute('geometry', 'primitive:box; width: 2.0; depth: 0.5; height: 2.0');
-        Album1Elem.setAttribute('material', 'src:assets/textures/brown_bird_album.jpg');
-        Album1Elem.setAttribute('delete-Album', '');
-        Album1Elem.setAttribute('position', {x:0, y:4, z:0});
+        let Album_Elem = document.createElement('a-entity');
+        Album_Elem.setAttribute('id', "brown_bird");
+        Album_Elem.setAttribute('class','clickable music');
+        Album_Elem.setAttribute('geometry', 'primitive:box; width: 2.0; depth: 0.5; height: 2.0');
+        Album_Elem.setAttribute('material', 'src:assets/textures/brown_bird_album.jpg');
+        Album_Elem.setAttribute('delete-Album', '');
+        Album_Elem.setAttribute('position', {x:0, y:4, z:0});
 
         let scene = document.querySelector('a-scene');
-        scene.appendChild(Album1Elem);
+        scene.appendChild(Album_Elem);
     }
 });
